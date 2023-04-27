@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.15)
+project(untitled LANGUAGES C CXX)
+
+file(GLOB_RECURSE SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
+file(GLOB_RECURSE HEADERS ${PROJECT_SOURCE_DIR}/src/*.h)
+
+add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
