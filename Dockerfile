@@ -36,6 +36,10 @@ USER $USERNAME
 # docker build --no-cache -t 00x56/docker-cpp:latest .
 # docker push 00x56/docker-cpp:latest
 
+# xhost +si:localuser:root
+# xhost +local:
 # docker run --rm --interactive --tty --volume $(pwd)/app:/app --workdir /app --volume /tmp/.X11-unix:/tmp/.X11-unix --env DISPLAY=$DISPLAY 00x56/docker-cpp /bin/bash
 # docker exec --interactive --tty --user root 7809913082a3 /bin/bash
 # docker exec --interactive --tty 7809913082a3 /bin/bash
+# xhost -local:
+# xhost -
