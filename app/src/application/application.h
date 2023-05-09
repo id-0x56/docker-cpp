@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef APPLICATION_H
     #define APPLICATION_H
 
@@ -19,9 +17,12 @@
 
             ~Application();
 
-            void run();
+            bool isExecute() const;
+            void isExecute(bool isExecute);
+
+            void execute();
 
         private:
-            bool is_running;
+            bool m_isExecute;
     };
 #endif

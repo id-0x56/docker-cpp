@@ -20,21 +20,31 @@
 
 Application::Application()
 {
-    this->is_running = true;
+    this->isExecute(true);
 }
 
 Application::~Application()
 {
-    this->is_running = false;
+    this->isExecute(false);
 }
 
-void Application::run()
+bool Application::isExecute() const
 {
-    while (this->is_running) {
+    return this->m_isExecute;
+}
+
+void Application::isExecute(bool isExecute)
+{
+    this->m_isExecute = isExecute;
+}
+
+void Application::execute()
+{
+    while (this->isExecute()) {
         int ch = getch();
 
         if (ch == 'q') {
-            this->is_running = false;
+            this->isExecute(false);
         } else {
             std::cout << "character: " << ch << std::endl;
         }
